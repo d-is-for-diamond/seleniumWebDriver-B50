@@ -1,13 +1,13 @@
 package org.example;
 
-import junit.framework.Test;
+import org.junit.Test;
 //import junit.framework.TestCase;
 //import junit.framework.TestSuite;
 import org.openqa.selenium.By;
 
 import static org.openqa.selenium.support.ui.ExpectedConditions.titleIs;
 
-public class MyFirstTest extends TestBase {
+public class AppTest extends TestBase {
 
     @Test
     public void myFirstTest() {
