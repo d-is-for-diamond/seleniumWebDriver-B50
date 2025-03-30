@@ -4,12 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="02d87383-ce7e-4a6f-83d4-ace0042f1b21" name="Changes" comment="seleniumWebDriver-B50 Коммит первого задания 2">
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/SecondTest.java" afterDir="false" />
+    <list default="true" id="02d87383-ce7e-4a6f-83d4-ace0042f1b21" name="Changes" comment="seleniumWebDriver-B50 Задание 3. Сценарий логина">
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/ThirdTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/FirstTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/FirstTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/TestBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/TestBase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/SecondTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/SecondTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,6 +66,8 @@
   "keyToString": {
     "JUnit.FirstTest.myFirstTest.executor": "Debug",
     "JUnit.SecondTest.mySecondTest.executor": "Run",
+    "JUnit.ThirdTest.mySecondTest.executor": "Run",
+    "JUnit.ThirdTest.myThirdTest.executor": "Run",
     "Maven. [org.apache.maven.plugins:maven-archetype-plugin:RELEASE:generate].executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
@@ -86,7 +86,7 @@
       <recent name="org.example" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.SecondTest.mySecondTest">
+  <component name="RunManager" selected="JUnit.ThirdTest.myThirdTest">
     <configuration name="FirstTest.myFirstTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="seleniumWebDriver-B50" />
       <extension name="coverage">
@@ -119,8 +119,42 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="ThirdTest.mySecondTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="seleniumWebDriver-B50" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.example" />
+      <option name="MAIN_CLASS_NAME" value="org.example.ThirdTest" />
+      <option name="METHOD_NAME" value="mySecondTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ThirdTest.myThirdTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="seleniumWebDriver-B50" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.example" />
+      <option name="MAIN_CLASS_NAME" value="org.example.ThirdTest" />
+      <option name="METHOD_NAME" value="myThirdTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.ThirdTest.myThirdTest" />
+        <item itemvalue="JUnit.ThirdTest.mySecondTest" />
         <item itemvalue="JUnit.SecondTest.mySecondTest" />
         <item itemvalue="JUnit.FirstTest.myFirstTest" />
       </list>
@@ -159,14 +193,23 @@
       <option name="project" value="LOCAL" />
       <updated>1743348890812</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="seleniumWebDriver-B50 Задание 3. Сценарий логина">
+      <option name="closed" value="true" />
+      <created>1743362917433</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1743362917433</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="seleniumWebDriver-B50 первый коммит" />
     <MESSAGE value="seleniumWebDriver-B50 Коммит первого задания" />
     <MESSAGE value="seleniumWebDriver-B50 Коммит первого задания 2" />
-    <option name="LAST_COMMIT_MESSAGE" value="seleniumWebDriver-B50 Коммит первого задания 2" />
+    <MESSAGE value="seleniumWebDriver-B50 Задание 3. Сценарий логина" />
+    <option name="LAST_COMMIT_MESSAGE" value="seleniumWebDriver-B50 Задание 3. Сценарий логина" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -190,6 +233,11 @@
           <url>file://$PROJECT_DIR$/src/test/java/org/example/FirstTest.java</url>
           <line>16</line>
           <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/org/example/ThirdTest.java</url>
+          <line>38</line>
+          <option name="timeStamp" value="13" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

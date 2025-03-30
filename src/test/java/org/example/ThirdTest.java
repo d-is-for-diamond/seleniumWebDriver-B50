@@ -8,35 +8,24 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.ie.InternetExplorerDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
-
-import java.sql.Driver;
 import java.time.Duration;
 
+import static org.openqa.selenium.support.ui.ExpectedConditions.not;
 import static org.openqa.selenium.support.ui.ExpectedConditions.presenceOfElementLocated;
 
-public class SecondTest {
-    private WebDriver driver;
+public class ThirdTest {
+    public WebDriver driver;
     public WebDriverWait wait;
 
 
     @Before
     public void start() {
-//        driver = new ChromeDriver();
-//        driver = new InternetExplorerDriver();
-        driver = new FirefoxDriver();
+        driver = new ChromeDriver();
         wait = new WebDriverWait(driver, Duration.ofMillis(10000));
-
-//        WebDriver chromeDriver = new ChromeDriver();
-//        WebDriver ieDriver = new InternetExplorerDriver();
-//        WebDriver firefoxDriver = new FirefoxDriver();
     }
 
-    @Test
-    public void mySecondTest() {
+    @Test //Задание 6. Сценарий, проходящий по всем разделам админки
+    public void myThirdTest() {
         driver.get("http://localhost:8080/litecart/admin/");
         driver.findElement(By.cssSelector("div.content tbody tr:first-child span.input-wrapper .fa.fa-user")).click();
         driver.findElement(By.cssSelector("input[name='username']")).sendKeys("admin");
@@ -45,6 +34,18 @@ public class SecondTest {
         driver.findElement(By.cssSelector("div.footer button[type='submit']")).click();
         wait.until(presenceOfElementLocated(By.cssSelector("a[title='Logout']")));
         wait.until(presenceOfElementLocated(By.cssSelector("div.notice.success")));
+        for (int i = 1; i < 18; i++) {//48 элементов всего, из них 17 элементов первого уровня
+            driver.findElement(By.cssSelector(".list-vertical li[id='app-']:nth-child(" + i + ")>a")).click();
+            wait.until(presenceOfElementLocated(By.cssSelector("h1")));
+            if (!driver.findElements(By.cssSelector("ul.docs")).isEmpty()) {
+                int subElementsSize = driver.findElements(By.cssSelector("ul.docs>li")).size();
+                for (int j = 1; j < subElementsSize; j++) {
+                    driver.findElement(By.cssSelector("ul.docs li:nth-child(" + j + ") a")).click();
+                    wait.until(presenceOfElementLocated(By.cssSelector("h1")));
+                }
+            }
+        }
+
     }
 
     @After
