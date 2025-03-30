@@ -4,10 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="02d87383-ce7e-4a6f-83d4-ace0042f1b21" name="Changes" comment="seleniumWebDriver-B50 первый коммит">
+    <list default="true" id="02d87383-ce7e-4a6f-83d4-ace0042f1b21" name="Changes" comment="seleniumWebDriver-B50 Коммит первого задания 2">
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/SecondTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/AppTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/AppTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/org/example/FirstTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/FirstTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/org/example/TestBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/TestBase.java" afterDir="false" />
     </list>
@@ -43,18 +43,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "d-is-for-diamond"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;d-is-for-diamond&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/d-is-for-diamond/seleniumWebDriver-B50.git",
-    "accountId": "b755d8f3-9070-4a6b-8d49-458578581ba7"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/d-is-for-diamond/seleniumWebDriver-B50.git&quot;,
+    &quot;accountId&quot;: &quot;b755d8f3-9070-4a6b-8d49-458578581ba7&quot;
   }
-}]]></component>
+}</component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 8
 }</component>
@@ -67,6 +67,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "JUnit.FirstTest.myFirstTest.executor": "Debug",
+    "JUnit.SecondTest.mySecondTest.executor": "Run",
     "Maven. [org.apache.maven.plugins:maven-archetype-plugin:RELEASE:generate].executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
@@ -80,7 +81,12 @@
     "settings.editor.selected.configurable": "reference.settingsdialog.project.gradle"
   }
 }]]></component>
-  <component name="RunManager">
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="org.example" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JUnit.SecondTest.mySecondTest">
     <configuration name="FirstTest.myFirstTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="seleniumWebDriver-B50" />
       <extension name="coverage">
@@ -97,8 +103,25 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="SecondTest.mySecondTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="seleniumWebDriver-B50" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.example" />
+      <option name="MAIN_CLASS_NAME" value="org.example.SecondTest" />
+      <option name="METHOD_NAME" value="mySecondTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.SecondTest.mySecondTest" />
         <item itemvalue="JUnit.FirstTest.myFirstTest" />
       </list>
     </recent_temporary>
@@ -120,30 +143,53 @@
       <option name="project" value="LOCAL" />
       <updated>1743347765249</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="seleniumWebDriver-B50 Коммит первого задания">
+      <option name="closed" value="true" />
+      <created>1743348861127</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1743348861127</updated>
+    </task>
+    <task id="LOCAL-00003" summary="seleniumWebDriver-B50 Коммит первого задания 2">
+      <option name="closed" value="true" />
+      <created>1743348890812</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1743348890812</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="seleniumWebDriver-B50 первый коммит" />
-    <option name="LAST_COMMIT_MESSAGE" value="seleniumWebDriver-B50 первый коммит" />
+    <MESSAGE value="seleniumWebDriver-B50 Коммит первого задания" />
+    <MESSAGE value="seleniumWebDriver-B50 Коммит первого задания 2" />
+    <option name="LAST_COMMIT_MESSAGE" value="seleniumWebDriver-B50 Коммит первого задания 2" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/org/example/TestBase.java</url>
-          <line>34</line>
+          <line>38</line>
           <option name="timeStamp" value="2" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/org/example/TestBase.java</url>
-          <line>35</line>
+          <line>39</line>
           <option name="timeStamp" value="5" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/org/example/FirstTest.java</url>
-          <line>25</line>
+          <line>21</line>
           <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/org/example/FirstTest.java</url>
+          <line>16</line>
+          <option name="timeStamp" value="7" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

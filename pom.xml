@@ -12,6 +12,10 @@
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+
+    <testng.version>7.6.1</testng.version>
+    <stqa.selenium.version>4.3</stqa.selenium.version>
+    <seleniumhq.selenium.version>4.11.0</seleniumhq.selenium.version>
   </properties>
 
   <dependencies>
@@ -38,5 +42,38 @@
 <!--      <version>RELEASE</version>-->
 <!--      <scope>test</scope>-->
 <!--    </dependency>-->
+    <dependency>
+      <groupId>org.testng</groupId>
+      <artifactId>testng</artifactId>
+      <version>${testng.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>ru.stqa.selenium</groupId>
+      <artifactId>webdriver-factory</artifactId>
+      <version>${stqa.selenium.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.seleniumhq.selenium</groupId>
+      <artifactId>selenium-java</artifactId>
+      <version>${seleniumhq.selenium.version}</version>
+    </dependency>
+
+
+
+    <dependency>
+      <groupId>org.seleniumhq.selenium</groupId>
+      <artifactId>selenium-chrome-driver</artifactId>
+      <version>${seleniumhq.selenium.version}</version>
+      <exclusions>
+        <exclusion>
+          <groupId>org.seleniumhq.selenium</groupId>
+          <artifactId>selenium-java</artifactId>
+        </exclusion>
+        <exclusion>
+          <groupId>org.seleniumhq.selenium</groupId>
+          <artifactId>selenium-remote-driver</artifactId>
+        </exclusion>
+      </exclusions>
+    </dependency>
   </dependencies>
 </project>
