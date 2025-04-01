@@ -20,6 +20,6 @@ public class FirstTest {
     @Test
     public void myFirstTest() {
         driver.get("http://www.google.com");
-        driver.close();
+        driver.quit();
     }
 }

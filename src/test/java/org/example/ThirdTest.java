@@ -33,12 +33,13 @@ public class ThirdTest {
         driver.findElement(By.cssSelector("div.footer button[type='submit']")).click();
         wait.until(presenceOfElementLocated(By.cssSelector("a[title='Logout']")));
         wait.until(presenceOfElementLocated(By.cssSelector("div.notice.success")));
-        for (int i = 1; i < 18; i++) {//48 элементов всего, из них 17 элементов первого уровня
+        int mainElements = driver.findElements(By.cssSelector(".list-vertical li[id='app-']")).size();
+        for (int i = 1; i <= mainElements; i++) {//48 элементов всего, из них 17 элементов первого уровня
             driver.findElement(By.cssSelector(".list-vertical li[id='app-']:nth-child(" + i + ")>a")).click();
             wait.until(presenceOfElementLocated(By.cssSelector("h1")));
             if (!driver.findElements(By.cssSelector("ul.docs")).isEmpty()) {
                 int subElementsSize = driver.findElements(By.cssSelector("ul.docs>li")).size();
-                for (int j = 1; j < subElementsSize; j++) {
+                for (int j = 2; j <= subElementsSize; j++) {
                     driver.findElement(By.cssSelector("ul.docs li:nth-child(" + j + ") a")).click();
                     wait.until(presenceOfElementLocated(By.cssSelector("h1")));
                 }
@@ -49,7 +50,7 @@ public class ThirdTest {
 
     @After
     public void closeBrowser() {
-        driver.close();
+        driver.quit();
         driver = null;
     }
 }

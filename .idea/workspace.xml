@@ -4,10 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="02d87383-ce7e-4a6f-83d4-ace0042f1b21" name="Changes" comment="seleniumWebDriver-B50 Задание 3. Сценарий логина">
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/ThirdTest.java" afterDir="false" />
+    <list default="true" id="02d87383-ce7e-4a6f-83d4-ace0042f1b21" name="Changes" comment="seleniumWebDriver-B50 Задание 6. Сценарий, проходящий по всем разделам админки 2">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/FirstTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/FirstTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/org/example/SecondTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/SecondTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/ThirdTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/ThirdTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -201,7 +202,23 @@
       <option name="project" value="LOCAL" />
       <updated>1743362917433</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="seleniumWebDriver-B50 Задание 6. Сценарий, проходящий по всем разделам админки">
+      <option name="closed" value="true" />
+      <created>1743373166000</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1743373166000</updated>
+    </task>
+    <task id="LOCAL-00006" summary="seleniumWebDriver-B50 Задание 6. Сценарий, проходящий по всем разделам админки 2">
+      <option name="closed" value="true" />
+      <created>1743373175036</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1743373175036</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -209,7 +226,9 @@
     <MESSAGE value="seleniumWebDriver-B50 Коммит первого задания" />
     <MESSAGE value="seleniumWebDriver-B50 Коммит первого задания 2" />
     <MESSAGE value="seleniumWebDriver-B50 Задание 3. Сценарий логина" />
-    <option name="LAST_COMMIT_MESSAGE" value="seleniumWebDriver-B50 Задание 3. Сценарий логина" />
+    <MESSAGE value="seleniumWebDriver-B50 Задание 6. Сценарий, проходящий по всем разделам админки" />
+    <MESSAGE value="seleniumWebDriver-B50 Задание 6. Сценарий, проходящий по всем разделам админки 2" />
+    <option name="LAST_COMMIT_MESSAGE" value="seleniumWebDriver-B50 Задание 6. Сценарий, проходящий по всем разделам админки 2" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -236,8 +255,13 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/org/example/ThirdTest.java</url>
+          <line>43</line>
+          <option name="timeStamp" value="18" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/org/example/ThirdTest.java</url>
           <line>38</line>
-          <option name="timeStamp" value="13" />
+          <option name="timeStamp" value="21" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
