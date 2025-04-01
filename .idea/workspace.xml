@@ -5,10 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="02d87383-ce7e-4a6f-83d4-ace0042f1b21" name="Changes" comment="seleniumWebDriver-B50 Задание 6. Сценарий, проходящий по всем разделам админки 2">
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/FourthTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/FirstTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/FirstTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/SecondTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/SecondTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/ThirdTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/ThirdTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,7 +66,7 @@
     "JUnit.FirstTest.myFirstTest.executor": "Debug",
     "JUnit.SecondTest.mySecondTest.executor": "Run",
     "JUnit.ThirdTest.mySecondTest.executor": "Run",
-    "JUnit.ThirdTest.myThirdTest.executor": "Run",
+    "JUnit.ThirdTest.myThirdTest.executor": "Debug",
     "Maven. [org.apache.maven.plugins:maven-archetype-plugin:RELEASE:generate].executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
@@ -87,7 +85,7 @@
       <recent name="org.example" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.ThirdTest.myThirdTest">
+  <component name="RunManager" selected="JUnit.FourthTest.myThirdTest">
     <configuration name="FirstTest.myFirstTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="seleniumWebDriver-B50" />
       <extension name="coverage">
@@ -99,6 +97,22 @@
       <option name="PACKAGE_NAME" value="org.example" />
       <option name="MAIN_CLASS_NAME" value="org.example.FirstTest" />
       <option name="METHOD_NAME" value="myFirstTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="FourthTest.myThirdTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="seleniumWebDriver-B50" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.example" />
+      <option name="MAIN_CLASS_NAME" value="org.example.FourthTest" />
+      <option name="METHOD_NAME" value="myThirdTest" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -154,6 +168,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.FourthTest.myThirdTest" />
         <item itemvalue="JUnit.ThirdTest.myThirdTest" />
         <item itemvalue="JUnit.ThirdTest.mySecondTest" />
         <item itemvalue="JUnit.SecondTest.mySecondTest" />
@@ -218,7 +233,15 @@
       <option name="project" value="LOCAL" />
       <updated>1743373175036</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="seleniumWebDriver-B50 Задание 6. Сценарий, проходящий по всем разделам админки 2">
+      <option name="closed" value="true" />
+      <created>1743537468027</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1743537468027</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -261,7 +284,7 @@
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/org/example/ThirdTest.java</url>
           <line>38</line>
-          <option name="timeStamp" value="21" />
+          <option name="timeStamp" value="22" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
