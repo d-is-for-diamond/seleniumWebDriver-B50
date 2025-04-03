@@ -1,6 +1,7 @@
 package org.example;
 
 import org.junit.After;
+import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.By;
@@ -27,7 +28,9 @@ public class FourthTest {
     public void myThirdTest() {
         driver.get("http://localhost:8080/litecart/en/rubber-ducks-c-1/");
         List<WebElement> products = driver.findElements(By.cssSelector(".listing-wrapper.products li.product"));
-        products.forEach(product -> product.findElement(By.cssSelector("a div.sticker")).isDisplayed());
+        for (WebElement product : products) {
+            Assert.assertEquals(1, product.findElements(By.cssSelector("a div.sticker")).size());
+        }
     }
 
     @After

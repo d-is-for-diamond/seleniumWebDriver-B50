@@ -5,8 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="02d87383-ce7e-4a6f-83d4-ace0042f1b21" name="Changes" comment="seleniumWebDriver-B50 Задание 6. Сценарий, проходящий по всем разделам админки 2">
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/FourthTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/FourthTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/FourthTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,25 +61,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "JUnit.FirstTest.myFirstTest.executor": "Debug",
-    "JUnit.SecondTest.mySecondTest.executor": "Run",
-    "JUnit.ThirdTest.mySecondTest.executor": "Run",
-    "JUnit.ThirdTest.myThirdTest.executor": "Debug",
-    "Maven. [org.apache.maven.plugins:maven-archetype-plugin:RELEASE:generate].executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "main",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/Денис/IdeaProjects/seleniumWebDriver-B50",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "reference.settingsdialog.project.gradle"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;JUnit.FirstTest.myFirstTest.executor&quot;: &quot;Debug&quot;,
+    &quot;JUnit.FourthTest.myThirdTest.executor&quot;: &quot;Debug&quot;,
+    &quot;JUnit.SecondTest.mySecondTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ThirdTest.mySecondTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ThirdTest.myThirdTest.executor&quot;: &quot;Debug&quot;,
+    &quot;Maven. [org.apache.maven.plugins:maven-archetype-plugin:RELEASE:generate].executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Денис/IdeaProjects/seleniumWebDriver-B50&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.project.gradle&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="org.example" />
@@ -241,7 +242,15 @@
       <option name="project" value="LOCAL" />
       <updated>1743537468027</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="seleniumWebDriver-B50 Задание 6. Сценарий, проходящий по всем разделам админки 2">
+      <option name="closed" value="true" />
+      <created>1743543579109</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1743543579109</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -285,6 +294,14 @@
           <url>file://$PROJECT_DIR$/src/test/java/org/example/ThirdTest.java</url>
           <line>38</line>
           <option name="timeStamp" value="22" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/org/example/FourthTest.java</url>
+          <line>35</line>
+          <properties>
+            <option name="lambda-ordinal" value="-1" />
+          </properties>
+          <option name="timeStamp" value="27" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
