@@ -22,6 +22,8 @@ public class FifthTest {
     public WebDriver driver;
     public WebDriverWait wait;
     public List<String> countriesWithGeoZonesList;
+    public List<String> countriesCodesWithGeoZonesList;
+    public List<String> zonesList;
 
 
     @Before
@@ -49,18 +51,25 @@ public class FifthTest {
     public void checkCountriesGeoZonesSortedListTest() {
         loginMethod();
         driver.get("http://localhost:8080/litecart/admin/?app=countries&doc=countries");
-        List<WebElement> rows = driver.findElements(By.cssSelector("table.dataTable tr.row"));// td:nth-child(6) a"));
-        countriesWithGeoZonesList = new ArrayList<>();
+        List<WebElement> rows = driver.findElements(By.cssSelector("table.dataTable tr.row"));
+        countriesCodesWithGeoZonesList = new ArrayList<>();
         for (WebElement row : rows) {
-            if (!Objects.equals(row.findElement(By.cssSelector("td:nth-child(6) a")).getAttribute("textContent"), "0")) {
-                String countryName = row.findElement(By.cssSelector("td:nth-child(5) a")).getAttribute("textContent");
-                countriesWithGeoZonesList.add(countryName);
-                for (String country : countriesWithGeoZonesList) {
-                    List<WebElement> countries = driver.findElements(By.cssSelector("table.dataTable tr.row td:nth-child(5) a"));
-                    countries
-
-                }
+            //тут доработать какой-то скролл
+            if (!Objects.equals(row.findElement(By.cssSelector("td:nth-child(6)")).getAttribute("textContent"), "0")) {
+                String countryName = row.findElement(By.cssSelector("td:nth-child(4)")).getAttribute("textContent");
+                countriesCodesWithGeoZonesList.add(countryName);
             }
+        }
+        for (String countryCodeWithGeoZones : countriesCodesWithGeoZonesList) {
+            driver.get("http://localhost:8080/litecart/admin/?app=countries&amp;doc=edit_country&amp;country_code=" + countryCodeWithGeoZones);
+            List<WebElement> zones = driver.findElements(By.cssSelector("table.dataTable tr:not(.header) td:nth-child(3) input:not([type='text'])"));
+            zonesList = new ArrayList<>();
+            for (WebElement zone : zones) {
+                String zoneName = zone.getAttribute("textContent");
+                zonesList.add(zoneName);
+            }
+            List<String> sortedZonesList = zonesList.stream().sorted().collect(Collectors.toList());
+            Assert.assertEquals(zonesList, sortedZonesList);
         }
     }
 

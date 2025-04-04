@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="02d87383-ce7e-4a6f-83d4-ace0042f1b21" name="Changes" comment="seleniumWebDriver-B50 Задание 7. Сценарий, проверяющий наличие стикеров у товаров 2">
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/FifthTest.java" afterDir="false" />
+    <list default="true" id="02d87383-ce7e-4a6f-83d4-ace0042f1b21" name="Changes" comment="seleniumWebDriver-B50 Задание 8.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/FifthTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/FifthTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,6 +63,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "JUnit.FifthTest.checkCountriesGeoZonesSortedListTest.executor": "Debug",
     "JUnit.FifthTest.checkCountriesSortedListTest.executor": "Run",
     "JUnit.FifthTest.myThirdTest.executor": "Run",
     "JUnit.FirstTest.myFirstTest.executor": "Debug",
@@ -88,7 +89,23 @@
       <recent name="org.example" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.FifthTest.checkCountriesSortedListTest">
+  <component name="RunManager" selected="JUnit.FifthTest.checkCountriesGeoZonesSortedListTest">
+    <configuration name="FifthTest.checkCountriesGeoZonesSortedListTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="seleniumWebDriver-B50" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.example" />
+      <option name="MAIN_CLASS_NAME" value="org.example.FifthTest" />
+      <option name="METHOD_NAME" value="checkCountriesGeoZonesSortedListTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="FifthTest.checkCountriesSortedListTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="seleniumWebDriver-B50" />
       <extension name="coverage">
@@ -137,22 +154,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ThirdTest.mySecondTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="seleniumWebDriver-B50" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.example.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="org.example" />
-      <option name="MAIN_CLASS_NAME" value="org.example.ThirdTest" />
-      <option name="METHOD_NAME" value="mySecondTest" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="ThirdTest.myThirdTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="seleniumWebDriver-B50" />
       <extension name="coverage">
@@ -171,11 +172,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.FifthTest.checkCountriesGeoZonesSortedListTest" />
         <item itemvalue="JUnit.FifthTest.checkCountriesSortedListTest" />
         <item itemvalue="JUnit.FifthTest.myThirdTest" />
         <item itemvalue="JUnit.FourthTest.myThirdTest" />
         <item itemvalue="JUnit.ThirdTest.myThirdTest" />
-        <item itemvalue="JUnit.ThirdTest.mySecondTest" />
       </list>
     </recent_temporary>
   </component>
@@ -260,7 +261,15 @@
       <option name="project" value="LOCAL" />
       <updated>1743717945932</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="seleniumWebDriver-B50 Задание 8.">
+      <option name="closed" value="true" />
+      <created>1743723580040</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1743723580040</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -271,7 +280,8 @@
     <MESSAGE value="seleniumWebDriver-B50 Задание 6. Сценарий, проходящий по всем разделам админки" />
     <MESSAGE value="seleniumWebDriver-B50 Задание 6. Сценарий, проходящий по всем разделам админки 2" />
     <MESSAGE value="seleniumWebDriver-B50 Задание 7. Сценарий, проверяющий наличие стикеров у товаров 2" />
-    <option name="LAST_COMMIT_MESSAGE" value="seleniumWebDriver-B50 Задание 7. Сценарий, проверяющий наличие стикеров у товаров 2" />
+    <MESSAGE value="seleniumWebDriver-B50 Задание 8." />
+    <option name="LAST_COMMIT_MESSAGE" value="seleniumWebDriver-B50 Задание 8." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -308,18 +318,23 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/org/example/FifthTest.java</url>
-          <line>40</line>
+          <line>42</line>
           <option name="timeStamp" value="31" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/org/example/FifthTest.java</url>
-          <line>36</line>
+          <line>38</line>
           <option name="timeStamp" value="32" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/org/example/FifthTest.java</url>
-          <line>35</line>
+          <line>37</line>
           <option name="timeStamp" value="33" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/org/example/FifthTest.java</url>
+          <line>56</line>
+          <option name="timeStamp" value="37" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
