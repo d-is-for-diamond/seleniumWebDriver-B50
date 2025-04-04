@@ -54,18 +54,18 @@ public class FifthTest {
         List<WebElement> rows = driver.findElements(By.cssSelector("table.dataTable tr.row"));
         countriesCodesWithGeoZonesList = new ArrayList<>();
         for (WebElement row : rows) {
-            //тут доработать какой-то скролл
+            Assert.assertTrue(row.isDisplayed());
             if (!Objects.equals(row.findElement(By.cssSelector("td:nth-child(6)")).getAttribute("textContent"), "0")) {
                 String countryName = row.findElement(By.cssSelector("td:nth-child(4)")).getAttribute("textContent");
                 countriesCodesWithGeoZonesList.add(countryName);
             }
         }
         for (String countryCodeWithGeoZones : countriesCodesWithGeoZonesList) {
-            driver.get("http://localhost:8080/litecart/admin/?app=countries&amp;doc=edit_country&amp;country_code=" + countryCodeWithGeoZones);
+            driver.get("http://localhost:8080/litecart/admin/?app=countries&doc=edit_country&country_code=" + countryCodeWithGeoZones);
             List<WebElement> zones = driver.findElements(By.cssSelector("table.dataTable tr:not(.header) td:nth-child(3) input:not([type='text'])"));
             zonesList = new ArrayList<>();
             for (WebElement zone : zones) {
-                String zoneName = zone.getAttribute("textContent");
+                String zoneName = zone.getAttribute("value");
                 zonesList.add(zoneName);
             }
             List<String> sortedZonesList = zonesList.stream().sorted().collect(Collectors.toList());
