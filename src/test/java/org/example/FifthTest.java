@@ -65,7 +65,7 @@ public class FifthTest {
             List<WebElement> zones = driver.findElements(By.cssSelector("table.dataTable tr:not(.header) td:nth-child(3) input:not([type='text'])"));
             zonesList = new ArrayList<>();
             for (WebElement zone : zones) {
-                String zoneName = zone.getAttribute("value");
+                String zoneName = zone.findElement(By.xpath("..")).getAttribute("textContent");
                 zonesList.add(zoneName);
             }
             List<String> sortedZonesList = zonesList.stream().sorted().collect(Collectors.toList());
