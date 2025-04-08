@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="02d87383-ce7e-4a6f-83d4-ace0042f1b21" name="Changes" comment="seleniumWebDriver-B50 Задание 8.3">
+    <list default="true" id="02d87383-ce7e-4a6f-83d4-ace0042f1b21" name="Changes" comment="seleniumWebDriver-B50 Задание 9">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/org/example/FifthTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/FifthTest.java" afterDir="false" />
     </list>
@@ -61,36 +61,38 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;JUnit.FifthTest.checkCountriesGeoZonesSortedListTest.executor&quot;: &quot;Debug&quot;,
-    &quot;JUnit.FifthTest.checkCountriesSortedListTest.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.FifthTest.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.FifthTest.myThirdTest.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.FirstTest.myFirstTest.executor&quot;: &quot;Debug&quot;,
-    &quot;JUnit.FourthTest.myThirdTest.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.SecondTest.mySecondTest.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.ThirdTest.mySecondTest.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.ThirdTest.myThirdTest.executor&quot;: &quot;Debug&quot;,
-    &quot;Maven. [org.apache.maven.plugins:maven-archetype-plugin:RELEASE:generate].executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Денис/IdeaProjects/seleniumWebDriver-B50&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.project.gradle&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "JUnit.FifthTest.checkCorrectProductPageTest.executor": "Debug",
+    "JUnit.FifthTest.checkCountriesGeoZonesSortedListTest.executor": "Debug",
+    "JUnit.FifthTest.checkCountriesSortedListTest.executor": "Run",
+    "JUnit.FifthTest.checkGeoZonesSortedListTest.executor": "Debug",
+    "JUnit.FifthTest.executor": "Run",
+    "JUnit.FifthTest.myThirdTest.executor": "Run",
+    "JUnit.FirstTest.myFirstTest.executor": "Debug",
+    "JUnit.FourthTest.myThirdTest.executor": "Run",
+    "JUnit.SecondTest.mySecondTest.executor": "Run",
+    "JUnit.ThirdTest.mySecondTest.executor": "Run",
+    "JUnit.ThirdTest.myThirdTest.executor": "Debug",
+    "Maven. [org.apache.maven.plugins:maven-archetype-plugin:RELEASE:generate].executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/Денис/IdeaProjects/seleniumWebDriver-B50",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "reference.settingsdialog.project.gradle"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="org.example" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.FifthTest.checkGeoZonesSortedListTest">
+  <component name="RunManager" selected="JUnit.FifthTest.checkCorrectProductPageTest">
     <configuration name="FifthTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="seleniumWebDriver-B50" />
       <extension name="coverage">
@@ -102,6 +104,22 @@
       <option name="PACKAGE_NAME" value="org.example" />
       <option name="MAIN_CLASS_NAME" value="org.example.FifthTest" />
       <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="FifthTest.checkCorrectProductPageTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="seleniumWebDriver-B50" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.example" />
+      <option name="MAIN_CLASS_NAME" value="org.example.FifthTest" />
+      <option name="METHOD_NAME" value="checkCorrectProductPageTest" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -154,29 +172,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="FifthTest.myThirdTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="seleniumWebDriver-B50" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.example.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="org.example" />
-      <option name="MAIN_CLASS_NAME" value="org.example.FifthTest" />
-      <option name="METHOD_NAME" value="myThirdTest" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.FifthTest.checkCorrectProductPageTest" />
         <item itemvalue="JUnit.FifthTest.checkGeoZonesSortedListTest" />
         <item itemvalue="JUnit.FifthTest.checkCountriesGeoZonesSortedListTest" />
         <item itemvalue="JUnit.FifthTest" />
         <item itemvalue="JUnit.FifthTest.checkCountriesSortedListTest" />
-        <item itemvalue="JUnit.FifthTest.myThirdTest" />
       </list>
     </recent_temporary>
   </component>
@@ -293,7 +295,15 @@
       <option name="project" value="LOCAL" />
       <updated>1744068909248</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="seleniumWebDriver-B50 Задание 9">
+      <option name="closed" value="true" />
+      <created>1744141961036</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1744141961037</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -307,7 +317,8 @@
     <MESSAGE value="seleniumWebDriver-B50 Задание 8." />
     <MESSAGE value="seleniumWebDriver-B50 Задание 8.2" />
     <MESSAGE value="seleniumWebDriver-B50 Задание 8.3" />
-    <option name="LAST_COMMIT_MESSAGE" value="seleniumWebDriver-B50 Задание 8.3" />
+    <MESSAGE value="seleniumWebDriver-B50 Задание 9" />
+    <option name="LAST_COMMIT_MESSAGE" value="seleniumWebDriver-B50 Задание 9" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -346,6 +357,11 @@
           <url>file://$PROJECT_DIR$/src/test/java/org/example/FifthTest.java</url>
           <line>71</line>
           <option name="timeStamp" value="46" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/org/example/FifthTest.java</url>
+          <line>141</line>
+          <option name="timeStamp" value="56" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

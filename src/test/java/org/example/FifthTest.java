@@ -96,6 +96,55 @@ public class FifthTest {
         }
     }
 
+    @Test //Задание 10 Проверить, что открывается правильная страница товара
+    public void checkCorrectProductPageTest() {
+        driver.get("http://localhost:8080/litecart/en/");
+        WebElement product = driver.findElement(By.cssSelector("div.box[id='box-campaigns'] a.link"));
+        String name = product.findElement(By.cssSelector("div.name")).getAttribute("textContent");
+
+        WebElement regularPrice = product.findElement(By.cssSelector("div.price-wrapper .regular-price"));
+        String regularPriceValue = regularPrice.getAttribute("textContent");
+        regularPriceValue = regularPriceValue.replaceAll("\\$","");
+        int regularPriceValueInt = Integer.parseInt(regularPriceValue);
+
+        String regularPriceColor = regularPrice.getCssValue("color");
+//        String regularPriceColor = regularPrice.getCssValue("color");
+//        проверить цвет: серый цвет это такой, у которого в RGBa представлении одинаковые значения для каналов R, G и B
+        String regularPriceTextDecoration = regularPrice.getCssValue("text-decoration-line");
+        String regularPriceFontWeight = regularPrice.getCssValue("font-weight");
+
+        WebElement campaignPrice = product.findElement(By.cssSelector("div.price-wrapper .campaign-price"));
+        String campaignPriceValue = campaignPrice.getAttribute("textContent");
+        campaignPriceValue = campaignPriceValue.replaceAll("\\$","");
+        int campaignPriceValueInt = Integer.parseInt(campaignPriceValue);
+        String campaignPriceColor = campaignPrice.getCssValue("color");
+//        String campaignPriceColor = campaignPrice.getCssValue("color");
+//        проверить цвет: красный цвет это такой, у которого в RGBa представлении каналы G и B имеют нулевые значения
+        String campaignPriceFontWeight = campaignPrice.getCssValue("font-weight");
+
+        product.click();
+        wait.until(presenceOfElementLocated(By.cssSelector("div.content div[id='box-product']")));
+        WebElement regularPriceProductPage = driver.findElement(By.cssSelector("div.price-wrapper .regular-price"));
+        WebElement campaignPriceProductPage = driver.findElement(By.cssSelector("div.price-wrapper .campaign-price"));
+
+        //а. на главной странице и на странице товара совпадает текст названия товара
+        Assert.assertEquals(name, driver.findElement(By.cssSelector("h1.title")).getAttribute("textContent"));
+
+        //б. на главной странице и на странице товара совпадают цены (обычная и акционная)
+        Assert.assertEquals(regularPriceValue, regularPriceProductPage.getAttribute("textContent").replaceAll("\\$",""));
+        Assert.assertEquals(campaignPriceValue, campaignPriceProductPage.getAttribute("textContent").replaceAll("\\$",""));
+
+        //в. обычная цена зачёркнутая
+        Assert.assertEquals(regularPriceTextDecoration, "line-through");
+        Assert.assertEquals(regularPriceProductPage.getCssValue("text-decoration-line"), "line-through");
+
+        //г. акционная цена жирная
+        Assert.assertEquals(campaignPriceFontWeight, campaignPriceProductPage.getCssValue("font-weight"));
+
+        //д. акционная цена крупнее, чем обычная
+        Assert.assertTrue(regularPriceValueInt<campaignPriceValueInt);
+    }
+
     @After
     public void closeBrowser() {
         driver.quit();
