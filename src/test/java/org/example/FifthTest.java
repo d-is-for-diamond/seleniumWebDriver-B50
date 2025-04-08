@@ -22,7 +22,7 @@ public class FifthTest {
     public WebDriver driver;
     public WebDriverWait wait;
     public List<String> countriesWithGeoZonesList;
-    public List<String> countriesCodesWithGeoZonesList;
+    public List<String> countryGeoZonesLinks;
     public List<String> zonesList;
 
 
@@ -52,20 +52,43 @@ public class FifthTest {
         loginMethod();
         driver.get("http://localhost:8080/litecart/admin/?app=countries&doc=countries");
         List<WebElement> rows = driver.findElements(By.cssSelector("table.dataTable tr.row"));
-        countriesCodesWithGeoZonesList = new ArrayList<>();
+        countryGeoZonesLinks = new ArrayList<>();
         for (WebElement row : rows) {
             Assert.assertTrue(row.isDisplayed());
             if (!Objects.equals(row.findElement(By.cssSelector("td:nth-child(6)")).getAttribute("textContent"), "0")) {
                 String countryName = row.findElement(By.cssSelector("td:nth-child(4)")).getAttribute("textContent");
-                countriesCodesWithGeoZonesList.add(countryName);
+                countryGeoZonesLinks.add(countryName);
             }
         }
-        for (String countryCodeWithGeoZones : countriesCodesWithGeoZonesList) {
+        for (String countryCodeWithGeoZones : countryGeoZonesLinks) {
             driver.get("http://localhost:8080/litecart/admin/?app=countries&doc=edit_country&country_code=" + countryCodeWithGeoZones);
             List<WebElement> zones = driver.findElements(By.cssSelector("table.dataTable tr:not(.header) td:nth-child(3) input:not([type='text'])"));
             zonesList = new ArrayList<>();
             for (WebElement zone : zones) {
                 String zoneName = zone.findElement(By.xpath("..")).getAttribute("textContent");
+                zonesList.add(zoneName);
+            }
+            List<String> sortedZonesList = zonesList.stream().sorted().collect(Collectors.toList());
+            Assert.assertEquals(zonesList, sortedZonesList);
+        }
+    }
+
+    @Test //Задание 9 Проверить сортировку геозон на странице геозон
+    public void checkGeoZonesSortedListTest() {
+        loginMethod();
+        driver.get("http://localhost:8080/litecart/admin/?app=geo_zones&doc=geo_zones");
+        List<WebElement> rows = driver.findElements(By.cssSelector("tr.row td:nth-child(3) a"));
+        countryGeoZonesLinks = new ArrayList<>();
+        for (WebElement row : rows) {
+            String link = row.getAttribute("href");
+                countryGeoZonesLinks.add(link);
+        }
+        for (String countryGeoZonesLink : countryGeoZonesLinks) {
+            driver.get(countryGeoZonesLink);
+            List<WebElement> zones = driver.findElements(By.cssSelector("table.dataTable tr td:nth-child(3) option[selected='selected']"));
+            zonesList = new ArrayList<>();
+            for (WebElement zone : zones) {
+                String zoneName = zone.getAttribute("textContent");
                 zonesList.add(zoneName);
             }
             List<String> sortedZonesList = zonesList.stream().sorted().collect(Collectors.toList());
