@@ -8,6 +8,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
@@ -28,6 +29,7 @@ public class FifthTest {
 
     @Before
     public void start() {
+//        driver = new FirefoxDriver();
         driver = new ChromeDriver();
         wait = new WebDriverWait(driver, Duration.ofMillis(10000));
     }
@@ -108,18 +110,13 @@ public class FifthTest {
         int regularPriceValueInt = Integer.parseInt(regularPriceValue);
 
         String regularPriceColor = regularPrice.getCssValue("color");
-//        String regularPriceColor = regularPrice.getCssValue("color");
-//        проверить цвет: серый цвет это такой, у которого в RGBa представлении одинаковые значения для каналов R, G и B
         String regularPriceTextDecoration = regularPrice.getCssValue("text-decoration-line");
-        String regularPriceFontWeight = regularPrice.getCssValue("font-weight");
 
         WebElement campaignPrice = product.findElement(By.cssSelector("div.price-wrapper .campaign-price"));
         String campaignPriceValue = campaignPrice.getAttribute("textContent");
         campaignPriceValue = campaignPriceValue.replaceAll("\\$","");
         int campaignPriceValueInt = Integer.parseInt(campaignPriceValue);
         String campaignPriceColor = campaignPrice.getCssValue("color");
-//        String campaignPriceColor = campaignPrice.getCssValue("color");
-//        проверить цвет: красный цвет это такой, у которого в RGBa представлении каналы G и B имеют нулевые значения
         String campaignPriceFontWeight = campaignPrice.getCssValue("font-weight");
 
         product.click();
@@ -134,15 +131,51 @@ public class FifthTest {
         Assert.assertEquals(regularPriceValue, regularPriceProductPage.getAttribute("textContent").replaceAll("\\$",""));
         Assert.assertEquals(campaignPriceValue, campaignPriceProductPage.getAttribute("textContent").replaceAll("\\$",""));
 
-        //в. обычная цена зачёркнутая
-        Assert.assertEquals(regularPriceTextDecoration, "line-through");
-        Assert.assertEquals(regularPriceProductPage.getCssValue("text-decoration-line"), "line-through");
+        //в. обычная цена зачёркнутая и серая
+        Assert.assertEquals("line-through", regularPriceTextDecoration);
+        Assert.assertEquals("line-through", regularPriceProductPage.getCssValue("text-decoration-line"));
 
-        //г. акционная цена жирная
-        Assert.assertEquals(campaignPriceFontWeight, campaignPriceProductPage.getCssValue("font-weight"));
+        regularPriceColor = regularPriceColor.replaceAll("rgba\\(","");
+        regularPriceColor = regularPriceColor.replaceAll("rgb\\(","");
+        regularPriceColor = regularPriceColor.replaceAll("\\)","");
+        String[] regularPriceRgbaSplit = regularPriceColor.split(", ");
+        String r = regularPriceRgbaSplit[0];
+        String g = regularPriceRgbaSplit[1];
+        String b = regularPriceRgbaSplit[2];
+        Assert.assertTrue(Objects.equals(r, g) && Objects.equals(r, b));
+
+        String regularPriceProductPageColor = regularPriceProductPage.getCssValue("color").replaceAll("rgba\\(","");
+        regularPriceProductPageColor = regularPriceProductPageColor.replaceAll("rgb\\(","");
+        regularPriceProductPageColor = regularPriceProductPageColor.replaceAll("\\)","");
+        String[] regularPriceProductPageRgbaSplit = regularPriceProductPageColor.split(", ");
+        r = regularPriceProductPageRgbaSplit[0];
+        g = regularPriceProductPageRgbaSplit[1];
+        b = regularPriceProductPageRgbaSplit[2];
+        Assert.assertTrue(Objects.equals(r, g) && Objects.equals(r, b));
+
+        //г. акционная цена жирная и красная
+        Assert.assertEquals("900", campaignPriceFontWeight);
+        Assert.assertEquals("700", campaignPriceProductPage.getCssValue("font-weight"));
+
+        String campaignColor = campaignPriceColor.replaceAll("rgba\\(","");
+        campaignColor = campaignColor.replaceAll("rgb\\(","");
+        campaignColor = campaignColor.replaceAll("\\)","");
+        String[] campaignPriceRgbaSplit = campaignColor.split(", ");
+        g = campaignPriceRgbaSplit[1];
+        b = campaignPriceRgbaSplit[2];
+        Assert.assertTrue(Objects.equals(g, "0") && Objects.equals(b, "0"));
+
+        String campaignPriceProductPageColor = campaignPriceProductPage.getCssValue("color").replaceAll("rgba\\(","");
+        campaignPriceProductPageColor = campaignPriceProductPageColor.replaceAll("rgb\\(","");
+        campaignPriceProductPageColor = campaignPriceProductPageColor.replaceAll("\\)","");
+        String[] campaignPriceProductPageRgbaSplit = campaignPriceProductPageColor.split(", ");
+        g = campaignPriceProductPageRgbaSplit[1];
+        b = campaignPriceProductPageRgbaSplit[2];
+        Assert.assertTrue(Objects.equals(g, "0") && Objects.equals(b, "0"));
+
 
         //д. акционная цена крупнее, чем обычная
-        Assert.assertTrue(regularPriceValueInt<campaignPriceValueInt);
+        Assert.assertTrue(regularPriceValueInt>campaignPriceValueInt);
     }
 
     @After
