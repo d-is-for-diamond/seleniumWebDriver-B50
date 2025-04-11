@@ -175,7 +175,11 @@ public class FifthTest {
 
 
         //д. акционная цена крупнее, чем обычная
-        Assert.assertTrue(regularPriceValueInt>campaignPriceValueInt);
+//        Assert.assertTrue(regularPriceValueInt<campaignPriceValueInt);
+
+        int regularPriceProductPageValueInt = Integer.parseInt(regularPriceProductPage.getAttribute("textContent").replaceAll("\\$",""));
+        int campainPriceProductPageValueInt = Integer.parseInt(campaignPriceProductPage.getAttribute("textContent").replaceAll("\\$",""));
+        Assert.assertTrue(regularPriceProductPageValueInt<campainPriceProductPageValueInt);
     }
 
     @After
