@@ -17,6 +17,7 @@ import java.util.List;
 import java.util.Objects;
 import java.util.stream.Collectors;
 
+import static java.lang.Integer.parseInt;
 import static org.openqa.selenium.support.ui.ExpectedConditions.presenceOfElementLocated;
 
 public class FifthTest {
@@ -100,14 +101,15 @@ public class FifthTest {
 
     @Test //Задание 10 Проверить, что открывается правильная страница товара
     public void checkCorrectProductPageTest() {
-        driver.get("http://localhost:8080/litecart/en/");
+        driver.get("http://localhost:80/litecart/en/");
         WebElement product = driver.findElement(By.cssSelector("div.box[id='box-campaigns'] a.link"));
         String name = product.findElement(By.cssSelector("div.name")).getAttribute("textContent");
 
         WebElement regularPrice = product.findElement(By.cssSelector("div.price-wrapper .regular-price"));
         String regularPriceValue = regularPrice.getAttribute("textContent");
         regularPriceValue = regularPriceValue.replaceAll("\\$","");
-        int regularPriceValueInt = Integer.parseInt(regularPriceValue);
+        int regularPriceValueInt = parseInt(regularPriceValue);
+        String regularPriceFontWeight = regularPrice.getCssValue("font-weight");
 
         String regularPriceColor = regularPrice.getCssValue("color");
         String regularPriceTextDecoration = regularPrice.getCssValue("text-decoration-line");
@@ -115,7 +117,7 @@ public class FifthTest {
         WebElement campaignPrice = product.findElement(By.cssSelector("div.price-wrapper .campaign-price"));
         String campaignPriceValue = campaignPrice.getAttribute("textContent");
         campaignPriceValue = campaignPriceValue.replaceAll("\\$","");
-        int campaignPriceValueInt = Integer.parseInt(campaignPriceValue);
+        int campaignPriceValueInt = parseInt(campaignPriceValue);
         String campaignPriceColor = campaignPrice.getCssValue("color");
         String campaignPriceFontWeight = campaignPrice.getCssValue("font-weight");
 
@@ -175,11 +177,10 @@ public class FifthTest {
 
 
         //д. акционная цена крупнее, чем обычная
-//        Assert.assertTrue(regularPriceValueInt<campaignPriceValueInt);
-
-        int regularPriceProductPageValueInt = Integer.parseInt(regularPriceProductPage.getAttribute("textContent").replaceAll("\\$",""));
-        int campainPriceProductPageValueInt = Integer.parseInt(campaignPriceProductPage.getAttribute("textContent").replaceAll("\\$",""));
-        Assert.assertTrue(regularPriceProductPageValueInt<campainPriceProductPageValueInt);
+        int regularPriceProductPageFontWeight = Integer.parseInt(regularPriceProductPage.getCssValue("font-weight"));
+        int campaignPriceProductPageFontWeight = Integer.parseInt(campaignPriceProductPage.getCssValue("font-weight"));
+        Assert.assertTrue(campaignPriceProductPageFontWeight>regularPriceProductPageFontWeight);
+        Assert.assertTrue(parseInt(campaignPriceFontWeight)>parseInt(regularPriceFontWeight));
     }
 
     @After
