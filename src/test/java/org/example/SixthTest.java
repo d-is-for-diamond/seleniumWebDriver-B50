@@ -24,7 +24,7 @@ public class SixthTest {
     }
 
     @Test //Задание 11. Сценарий регистрации пользователя
-    public void checkCountriesSortedListTest() {
+    public void registerAndLoginScenario() {
         String characterSet = "abcdefghijklmnopqrstuvwxyz0123456789";
         StringBuilder randomWord = new StringBuilder();
         Random random = new Random();
@@ -54,7 +54,10 @@ public class SixthTest {
         driver.findElement(By.cssSelector("input[name='password']")).sendKeys(psswrd);
         driver.findElement(By.cssSelector("button[name='login']")).click();
         driver.findElement(By.cssSelector("div[id='box-account'] a[href='http://localhost/litecart/en/logout']")).click();
+    }
 
+    @Test //Задание 12. Сделайте сценарий добавления товара
+    public void addToCartScenario() {
 
     }
 
