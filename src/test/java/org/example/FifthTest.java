@@ -17,6 +17,7 @@ import java.util.List;
 import java.util.Objects;
 import java.util.stream.Collectors;
 
+import static java.lang.Float.parseFloat;
 import static java.lang.Integer.parseInt;
 import static org.openqa.selenium.support.ui.ExpectedConditions.presenceOfElementLocated;
 
@@ -110,6 +111,7 @@ public class FifthTest {
         regularPriceValue = regularPriceValue.replaceAll("\\$","");
         int regularPriceValueInt = parseInt(regularPriceValue);
         String regularPriceFontWeight = regularPrice.getCssValue("font-weight");
+        String regularPriceFontSize = regularPrice.getCssValue("font-size").replaceAll("px","");
 
         String regularPriceColor = regularPrice.getCssValue("color");
         String regularPriceTextDecoration = regularPrice.getCssValue("text-decoration-line");
@@ -120,6 +122,7 @@ public class FifthTest {
         int campaignPriceValueInt = parseInt(campaignPriceValue);
         String campaignPriceColor = campaignPrice.getCssValue("color");
         String campaignPriceFontWeight = campaignPrice.getCssValue("font-weight");
+        String campaignPriceFontSize = campaignPrice.getCssValue("font-size").replaceAll("px","");
 
         product.click();
         wait.until(presenceOfElementLocated(By.cssSelector("div.content div[id='box-product']")));
@@ -177,10 +180,10 @@ public class FifthTest {
 
 
         //д. акционная цена крупнее, чем обычная
-        int regularPriceProductPageFontWeight = Integer.parseInt(regularPriceProductPage.getCssValue("font-weight"));
-        int campaignPriceProductPageFontWeight = Integer.parseInt(campaignPriceProductPage.getCssValue("font-weight"));
+        int regularPriceProductPageFontWeight = Integer.parseInt(regularPriceProductPage.getCssValue("font-size").replaceAll("px",""));
+        int campaignPriceProductPageFontWeight = Integer.parseInt(campaignPriceProductPage.getCssValue("font-size").replaceAll("px",""));
         Assert.assertTrue(campaignPriceProductPageFontWeight>regularPriceProductPageFontWeight);
-        Assert.assertTrue(parseInt(campaignPriceFontWeight)>parseInt(regularPriceFontWeight));
+        Assert.assertTrue(parseFloat(campaignPriceFontSize)>parseFloat(regularPriceFontSize));
     }
 
     @After
