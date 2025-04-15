@@ -47,13 +47,11 @@ public class SeventhTest {
         List<WebElement> elementsForDelete = driver.findElements(By.xpath("//*[text()='Remove']"));
         List<WebElement> listE = driver.findElements(By.cssSelector("table.dataTable tr:not(.header):not(.footer) td.item"));
         for (int i = elementsForDelete.size(); i > 0; i--) {
-            driver.findElement(By.xpath("//*[text()='Remove']")).click();
+            driver.findElement(By.cssSelector("button[name='remove_cart_item']")).click();
+            wait.until(numberOfElementsToBe(By.cssSelector("button[name='remove_cart_item']"), i-1));
             int elementOrder = elementsForDelete.size()-1;
-            if(i>elementOrder) {
-                wait.until(stalenessOf(listE.get(elementOrder)));
-            } else {
-                wait.until(presenceOfElementLocated(By.xpath("/html/body/div[2]/div/div[2]/div/table/tbody/tr[2]/td[2]/div/div/div[1]/p[1]/em[text()='There are no items in your cart.']")));
-            }
+            wait.until(stalenessOf(listE.get(elementOrder)));
+            wait.until(refreshed(stalenessOf(listE.get(elementOrder))));
         }
     }
 
