@@ -45,14 +45,14 @@ public class EighthTest {
         List<WebElement> links = driver.findElements(By.cssSelector("i.fa.fa-external-link"));
         for (int i = 0; i < links.size(); i++) {
             String oldWindow = driver.getWindowHandle();
+            Set<String> oldWindows = driver.getWindowHandles();
             links.get(i).click();
-
+            wait.until(numberOfWindowsToBe(2));
             // записывает в переменную newWindow id новой вкладки
             Set<String> allWindows = driver.getWindowHandles();
             for (String window : allWindows) {
                 if (!Objects.equals(window, oldWindow)) {newWindow = window;}
             }
-
             driver.switchTo().window(newWindow);
             wait.until(titleIs(titles.get(i)));
 
