@@ -5,8 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="02d87383-ce7e-4a6f-83d4-ace0042f1b21" name="Changes" comment="seleniumWebDriver-B50 Задание 12. Сценарий добавления товара">
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/EighthTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/SeventhTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/SeventhTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,6 +63,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "JUnit.EighthTest.addAndDeleteItemsFromCartTest.executor": "Run",
     "JUnit.FifthTest.checkCorrectProductPageTest.executor": "Run",
     "JUnit.FifthTest.checkCountriesGeoZonesSortedListTest.executor": "Debug",
     "JUnit.FifthTest.checkCountriesSortedListTest.executor": "Run",
@@ -95,7 +96,23 @@
       <recent name="org.example" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.SeventhTest.addAndDeleteItemsFromCartTest">
+  <component name="RunManager" selected="JUnit.EighthTest.addAndDeleteItemsFromCartTest">
+    <configuration name="EighthTest.addAndDeleteItemsFromCartTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="seleniumWebDriver-B50" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.example" />
+      <option name="MAIN_CLASS_NAME" value="org.example.EighthTest" />
+      <option name="METHOD_NAME" value="addAndDeleteItemsFromCartTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="FifthTest.checkCorrectProductPageTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="seleniumWebDriver-B50" />
       <extension name="coverage">
@@ -107,22 +124,6 @@
       <option name="PACKAGE_NAME" value="org.example" />
       <option name="MAIN_CLASS_NAME" value="org.example.FifthTest" />
       <option name="METHOD_NAME" value="checkCorrectProductPageTest" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="FifthTest.checkGeoZonesSortedListTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="seleniumWebDriver-B50" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.example.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="org.example" />
-      <option name="MAIN_CLASS_NAME" value="org.example.FifthTest" />
-      <option name="METHOD_NAME" value="checkGeoZonesSortedListTest" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -178,11 +179,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.EighthTest.addAndDeleteItemsFromCartTest" />
         <item itemvalue="JUnit.SeventhTest.addAndDeleteItemsFromCartTest" />
         <item itemvalue="JUnit.SixthTest.addToCartScenario" />
         <item itemvalue="JUnit.SixthTest.checkCountriesSortedListTest" />
         <item itemvalue="JUnit.FifthTest.checkCorrectProductPageTest" />
-        <item itemvalue="JUnit.FifthTest.checkGeoZonesSortedListTest" />
       </list>
     </recent_temporary>
   </component>
@@ -379,7 +380,15 @@
       <option name="project" value="LOCAL" />
       <updated>1744661587498</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="seleniumWebDriver-B50 Задание 12. Сценарий добавления товара">
+      <option name="closed" value="true" />
+      <created>1744755459143</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1744755459143</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -470,6 +479,11 @@
           <url>file://$PROJECT_DIR$/src/test/java/org/example/SixthTest.java</url>
           <line>79</line>
           <option name="timeStamp" value="36" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/org/example/EighthTest.java</url>
+          <line>58</line>
+          <option name="timeStamp" value="37" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
