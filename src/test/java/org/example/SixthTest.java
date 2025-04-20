@@ -63,7 +63,13 @@ public class SixthTest {
 
         driver.findElement(By.cssSelector("a[href='http://localhost/litecart/admin/?app=catalog&doc=catalog']")).click();
         driver.findElement(By.cssSelector("a[href='http://localhost/litecart/admin/?category_id=0&app=catalog&doc=edit_product']")).click();
-        String name = "newProductName";
+        String characterSet = "abcdefghijklmnopqrstuvwxyz0123456789";
+        StringBuilder name = new StringBuilder();
+        Random random = new Random();
+        for (int i = 0; i < 5; i++) {
+            int index = random.nextInt(characterSet.length());
+            name.append(characterSet.charAt(index));
+        }
         driver.findElement(By.cssSelector("input[name='name[en]']")).sendKeys(name);
         driver.findElement(By.cssSelector("input[name='code']")).sendKeys("Code");
         driver.findElement(By.cssSelector("input[type='checkbox'][value='1-1']")).click();
