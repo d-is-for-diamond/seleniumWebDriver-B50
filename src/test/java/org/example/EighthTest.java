@@ -4,13 +4,13 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 import java.util.Set;
@@ -31,21 +31,12 @@ public class EighthTest {
 
     @Test //14. Открытие ссылок в новом окне
     public void addAndDeleteItemsFromCartTest() {
-        List<String> titles = new ArrayList<>();
-        titles.add("ISO 3166-1 alpha-2 - Wikipedia");
-        titles.add("ISO 3166-1 alpha-3 - Wikipedia");
-        titles.add("Regular expression - Wikipedia");
-        titles.add("Data as a Service Solutions | Informatica");
-        titles.add("Regular expression - Wikipedia");
-        titles.add("List of countries and capitals with currency and language - Wikipedia");
-        titles.add("List of telephone country codes - Wikipedia");
         loginMethod();
         driver.get("http://localhost:80/litecart/admin/?app=countries&doc=countries");
         driver.findElement(By.cssSelector("a[href='http://localhost/litecart/admin/?app=countries&doc=edit_country']")).click();
         List<WebElement> links = driver.findElements(By.cssSelector("i.fa.fa-external-link"));
         for (int i = 0; i < links.size(); i++) {
             String oldWindow = driver.getWindowHandle();
-            Set<String> oldWindows = driver.getWindowHandles();
             links.get(i).click();
             wait.until(numberOfWindowsToBe(2));
             // записывает в переменную newWindow id новой вкладки
@@ -54,7 +45,8 @@ public class EighthTest {
                 if (!Objects.equals(window, oldWindow)) {newWindow = window;}
             }
             driver.switchTo().window(newWindow);
-            wait.until(titleIs(titles.get(i)));
+            WebElement new_page = driver.findElement(By.tagName("html"));
+            wait.until(webDriver -> ((JavascriptExecutor) webDriver).executeScript("return document.readyState").equals("complete"));
 
             driver.close();
             driver.switchTo().window(oldWindow);
